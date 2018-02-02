@@ -1,0 +1,5 @@
+FROM quay.io/pypa/manylinux1_i686
+COPY build_openssl /build_openssl
+RUN build_openssl/build.sh
+ENV OPENSSL_LIB_DIR=/usr/local/lib
+ENV OPENSSL_INCLUDE_DIR=/usr/local/include
